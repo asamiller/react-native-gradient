@@ -10,26 +10,36 @@ import Foundation
 import GradientView
 
 @objc(RNGradientView)
-class RNGradientView : UIView {
+class RNGradientView : GradientView {
   
-
-  override func layoutSubviews() {
-    let gradientView = GradientView(frame: self.bounds)
-        // Set the gradient colors
-    gradientView.colors = [UIColor.blueColor(), UIColor.yellowColor()]
-    
-    // Optionally set some locations
-    gradientView.locations = [0.8, 1.0]
-    
-    // Optionally change the direction. The default is vertical.
-    //    gradientView.direction = .Horizontal
-    
-    // Add some borders too if you want
-    //    gradientView.topBorderColor = UIColor.redColor()
-    //    gradientView.bottomBorderColor = UIColor.blueColor()
-
-    self.addSubview(gradientView);
+  override init(frame: CGRect) {
+    super.init(frame: frame);
+    self.frame = frame;
+    self.colors = [UIColor.blueColor(), UIColor.yellowColor()]
+    self.locations = [0.8, 1.0]
   }
+
+  required init?(coder aDecoder: NSCoder) {
+      fatalError("init(coder:) has not been implemented")
+  }
+  
+//  override func layoutSubviews() {
+//    let gradientView = GradientView(frame: self.bounds)
+//        // Set the gradient colors
+//    gradientView.colors = [UIColor.blueColor(), UIColor.yellowColor()]
+//    
+//    // Optionally set some locations
+//    gradientView.locations = [0.8, 1.0]
+//    
+//    // Optionally change the direction. The default is vertical.
+//    //    gradientView.direction = .Horizontal
+//    
+//    // Add some borders too if you want
+//    //    gradientView.topBorderColor = UIColor.redColor()
+//    //    gradientView.bottomBorderColor = UIColor.blueColor()
+//
+//    self.addSubview(gradientView);
+//  }
 
 
 }
