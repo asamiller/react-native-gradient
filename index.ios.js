@@ -18,7 +18,12 @@ var GradientTest = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <LinearGradient style={styles.gradient} locations={[0.2, 1.0]} />
+        <LinearGradient 
+            style={styles.gradient} 
+            locations={[0.2, 1.0]} 
+            colors={['#000', '#FFF']}
+
+        />
       </View>
     );
   }
