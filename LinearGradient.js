@@ -1,25 +1,16 @@
-import React from 'react-native';
-
-var processColor = require('processColor');
+import React, { requireNativeComponent, processColor } from 'react-native';
+let RNLinearGradient = requireNativeComponent('RNLinearGradientSwift', LinearGradient);
 
 class LinearGradient extends React.Component {
-
-
-
   render() {
-    let nativeProps = {
-      ...this.props,
-      colors: processColor(this.props.colors)
-    }
-    return <RNLinearGradient {...nativeProps} />;
+    let { colors, ...otherProps } = this.props;
+    return <RNLinearGradient {...otherProps} colors={colors.map(processColor)} />;
   }
 }
 
 LinearGradient.propTypes = {
+  colors: React.PropTypes.array.isRequired,
   locations: React.PropTypes.array,
-  colors: React.PropTypes.array
 }
-
-var RNLinearGradient = React.requireNativeComponent('RNLinearGradientSwift', LinearGradient);
 
 export default LinearGradient;

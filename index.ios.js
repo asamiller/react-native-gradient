@@ -1,7 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
 'use strict';
 
 var React = require('react-native');
@@ -19,11 +15,13 @@ var GradientTest = React.createClass({
     return (
       <View style={styles.container}>
         <LinearGradient 
-            style={styles.gradient} 
-            locations={[0.2, 1.0]} 
-            colors={['#000', '#FFF']}
-
+          style={styles.gradient} 
+          locations={[0, 1.0]} 
+          colors={['#5ED2A0', '#339CB1']}
         />
+        <Text style={styles.text}>
+          Hello Gradients!
+        </Text>
       </View>
     );
   }
@@ -31,12 +29,25 @@ var GradientTest = React.createClass({
 
 var styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   gradient: {
-    flex:1
-  }
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+  },
+
+  text: {
+    color: '#fff',
+    fontSize: 30,
+    backgroundColor: 'transparent',
+  },
 });
 
 AppRegistry.registerComponent('GradientTest', () => GradientTest);
