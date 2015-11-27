@@ -13,6 +13,9 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* GradientTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* GradientTestTests.m */; };
+		11A06DCA1C078C220035C918 /* RNGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A06DC61C078C220035C918 /* RNGradientView.swift */; };
+		11A06DCB1C078C220035C918 /* RNGradientViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A06DC71C078C220035C918 /* RNGradientViewManager.swift */; };
+		11A06DCC1C078C220035C918 /* RNLinearGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A06DC91C078C220035C918 /* RNLinearGradient.m */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -21,10 +24,6 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		424ACDE31C02D5F400243EEF /* RNLinearGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 424ACDE01C02D5F400243EEF /* RNLinearGradient.m */; settings = {ASSET_TAGS = (); }; };
-		42E7FA2B1C03CD7700846005 /* GradientViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E7FA2A1C03CD7700846005 /* GradientViewManager.swift */; settings = {ASSET_TAGS = (); }; };
-		42E7FA441C03D16E00846005 /* GradientView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E7FA431C03D16400846005 /* GradientView.framework */; };
-		42E7FA451C03D16E00846005 /* GradientView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42E7FA431C03D16400846005 /* GradientView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -92,27 +91,6 @@
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
 		};
-		42E7FA401C03D16400846005 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42E7FA3B1C03D16400846005 /* Gradient View.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2163B9F61A25FBF000610B0C;
-			remoteInfo = Example;
-		};
-		42E7FA421C03D16400846005 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42E7FA3B1C03D16400846005 /* Gradient View.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2163BA201A25FBFD00610B0C;
-			remoteInfo = GradientView;
-		};
-		42E7FA461C03D16E00846005 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42E7FA3B1C03D16400846005 /* Gradient View.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2163BA1F1A25FBFD00610B0C;
-			remoteInfo = GradientView;
-		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
@@ -129,20 +107,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		42E7FA481C03D16E00846005 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				42E7FA451C03D16E00846005 /* GradientView.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
@@ -153,6 +117,11 @@
 		00E356EE1AD99517003FC87E /* GradientTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GradientTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* GradientTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientTestTests.m; sourceTree = "<group>"; };
+		11A06DBA1C078C220035C918 /* GradientTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GradientTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		11A06DC61C078C220035C918 /* RNGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNGradientView.swift; sourceTree = "<group>"; };
+		11A06DC71C078C220035C918 /* RNGradientViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNGradientViewManager.swift; sourceTree = "<group>"; };
+		11A06DC81C078C220035C918 /* RNLinearGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNLinearGradient.h; sourceTree = "<group>"; };
+		11A06DC91C078C220035C918 /* RNLinearGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNLinearGradient.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* GradientTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradientTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,11 +132,6 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GradientTest/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GradientTest/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		424ACDDF1C02D5F400243EEF /* RNLinearGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNLinearGradient.h; sourceTree = "<group>"; };
-		424ACDE01C02D5F400243EEF /* RNLinearGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNLinearGradient.m; sourceTree = "<group>"; };
-		424ACDF01C02D7BA00243EEF /* GradientTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GradientTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		42E7FA2A1C03CD7700846005 /* GradientViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewManager.swift; sourceTree = "<group>"; };
-		42E7FA3B1C03D16400846005 /* Gradient View.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Gradient View.xcodeproj"; path = "GradientView/Gradient View.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,7 +156,6 @@
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
-				42E7FA441C03D16E00846005 /* GradientView.framework in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 			);
@@ -284,6 +247,11 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				11A06DC61C078C220035C918 /* RNGradientView.swift */,
+				11A06DC71C078C220035C918 /* RNGradientViewManager.swift */,
+				11A06DC81C078C220035C918 /* RNLinearGradient.h */,
+				11A06DC91C078C220035C918 /* RNLinearGradient.m */,
+				11A06DBA1C078C220035C918 /* GradientTest-Bridging-Header.h */,
 			);
 			name = GradientTest;
 			sourceTree = "<group>";
@@ -292,15 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				146834041AC3E56700842450 /* libReact.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		42E7FA3C1C03D16400846005 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				42E7FA411C03D16400846005 /* Example.app */,
-				42E7FA431C03D16400846005 /* GradientView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,10 +275,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				42E7FA3B1C03D16400846005 /* Gradient View.xcodeproj */,
-				424ACDDF1C02D5F400243EEF /* RNLinearGradient.h */,
-				424ACDE01C02D5F400243EEF /* RNLinearGradient.m */,
-				42E7FA2A1C03CD7700846005 /* GradientViewManager.swift */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -330,7 +285,6 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				424ACDF01C02D7BA00243EEF /* GradientTest-Bridging-Header.h */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -393,12 +347,10 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				42E7FA481C03D16E00846005 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				42E7FA471C03D16E00846005 /* PBXTargetDependency */,
 			);
 			name = GradientTest;
 			productName = "Hello World";
@@ -411,7 +363,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
@@ -433,10 +385,6 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
-				{
-					ProductGroup = 42E7FA3C1C03D16400846005 /* Products */;
-					ProjectRef = 42E7FA3B1C03D16400846005 /* Gradient View.xcodeproj */;
-				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -543,20 +491,6 @@
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42E7FA411C03D16400846005 /* Example.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Example.app;
-			remoteRef = 42E7FA401C03D16400846005 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42E7FA431C03D16400846005 /* GradientView.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GradientView.framework;
-			remoteRef = 42E7FA421C03D16400846005 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -605,7 +539,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "PATH=\"$PATH:$HOME/npm/bin\"\n../node_modules/react-native/packager/react-native-xcode.sh";
+			shellScript = "../node_modules/react-native/packager/react-native-xcode.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -623,8 +557,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				424ACDE31C02D5F400243EEF /* RNLinearGradient.m in Sources */,
-				42E7FA2B1C03CD7700846005 /* GradientViewManager.swift in Sources */,
+				11A06DCC1C078C220035C918 /* RNLinearGradient.m in Sources */,
+				11A06DCA1C078C220035C918 /* RNGradientView.swift in Sources */,
+				11A06DCB1C078C220035C918 /* RNGradientViewManager.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,11 +571,6 @@
 			isa = PBXTargetDependency;
 			target = 13B07F861A680F5B00A75B9A /* GradientTest */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-		42E7FA471C03D16E00846005 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GradientView;
-			targetProxy = 42E7FA461C03D16E00846005 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -700,12 +630,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEAD_CODE_STRIPPING = NO;
-				DEFINES_MODULE = NO;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../../../node_modules/react-native/React/**",
 				);
 				INFOPLIST_FILE = GradientTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -722,12 +651,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = NO;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../../../node_modules/react-native/React/**",
 				);
 				INFOPLIST_FILE = GradientTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

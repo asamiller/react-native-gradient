@@ -9,6 +9,6 @@ class LinearGradient extends React.Component {
 LinearGradient.propTypes = {
 }
 
-var RNLinearGradient = React.requireNativeComponent('RNLinearGradient', LinearGradient);
+var RNLinearGradient = React.requireNativeComponent('RNLinearGradientSwift', LinearGradient);
 
 export default LinearGradient;
