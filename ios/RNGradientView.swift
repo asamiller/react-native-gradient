@@ -11,16 +11,22 @@ import GradientView
 
 @objc(RNGradientView)
 class RNGradientView : GradientView {
-  
+    
   override init(frame: CGRect) {
     super.init(frame: frame);
     self.frame = frame;
     self.colors = [UIColor.blueColor(), UIColor.yellowColor()]
-    self.locations = [0.8, 1.0]
   }
 
   required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
+  }
+  
+  func setLocations(locations: NSArray) {
+    let from = locations[0] as! CGFloat;
+    let to = locations[1] as! CGFloat;
+    
+    self.locations = [from, to];
   }
   
 //  override func layoutSubviews() {
