@@ -15,7 +15,6 @@ class RNGradientView : GradientView {
   override init(frame: CGRect) {
     super.init(frame: frame);
     self.frame = frame;
-    self.colors = [UIColor.blueColor(), UIColor.redColor(), UIColor.yellowColor()]
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -24,5 +23,9 @@ class RNGradientView : GradientView {
   
   func setLocations(locations: NSArray) {
     self.locations = locations.map({ return $0 as! CGFloat});
+  }
+  
+  func setColors(colors: NSArray) {
+    self.colors = colors.map({return RCTConvert.UIColor($0)})
   }
 }

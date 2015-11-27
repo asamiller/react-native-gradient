@@ -3,3 +3,4 @@
 //
 
 #import "RCTViewManager.h"
+#import "RCTConvert.h"
